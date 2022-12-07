@@ -15,6 +15,11 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      # You can use PyPy versions in python-version.
+      # For example, pypy-2.7 and pypy-3.8
+      matrix:
+        python-version: ["3.7"]
     steps:
       #----------------------------------------------
       #       check-out repo and set-up python
@@ -25,7 +30,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v4
         with:
-          python-version: '^3.7'
+          python-version: '3.7'
       #----------------------------------------------
       #  -----  install & configure poetry  -----
       #----------------------------------------------
