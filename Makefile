@@ -11,4 +11,4 @@ format:
 	poetry run black .
 
 test:
-	pytest .
+	poetry run pytest .
