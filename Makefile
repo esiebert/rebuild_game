@@ -1,5 +1,8 @@
 run:
-	poetry run black .
+	poetry run python3 rebuild_game
+
+install:
+	poetry install
 
 lint:
 	poetry run isort --check --profile black .
